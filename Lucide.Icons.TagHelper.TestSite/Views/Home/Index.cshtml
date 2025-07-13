@@ -1,0 +1,40 @@
+@model HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Lucide.Icons.TagHelper</h1>
+    <p>This library provides a simple <a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/intro" target="_blank">ASP.NET Tag Helper</a> for the brilliant <a href="https://lucide.dev/icons/" target="_blank">Lucide Icons Library</a></p>
+    
+    <hr/>
+    <style>
+      .icon {
+          width:170px;
+          height:170px;
+          & svg {
+              width:100%;
+          }
+      }
+    </style>
+    <br/>
+    <p>Use the Tag Helper like this:</p>
+    <code>
+        &lt;lucide-icon name="a-arrow-down" /&gt;
+    </code>
+    <br/>
+    <br />
+    <br />
+    <ul class="icons">
+      @foreach (var icon in Model.Icons)
+      {
+        <li>
+          <div>
+            <lucide-icon name="@icon.Name"/>
+          </div>
+          @icon.Name
+        </li>
+      }
+    </ul>
+
+</div>

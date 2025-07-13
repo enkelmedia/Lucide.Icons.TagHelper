@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RazorLangVersion>8.0</RazorLangVersion>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+    <StaticWebAssetBasePath>/</StaticWebAssetBasePath>
+    <ContentTargetFolders>.</ContentTargetFolders>
+    <PackageId>Lucide.Icons.TagHelper</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Markus Johansson</Authors>
+    <Description>Lucide icons for ASP.NET Core MVC (Razor)</Description>
+    <PackageProjectUrl>https://github.com/enkelmedia/Lucide.Icons.TagHelper</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/enkelmedia/Lucide.Icons.TagHelper</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>icons lucide svg</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <Version>1.0.0</Version>
+    <PackageVersion>1.0.0</PackageVersion>
+    <InformationalVersion>1.0.0</InformationalVersion>
+    <PackageIcon>icon.png</PackageIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\build\readme.md" Pack="true" PackagePath="\" />
+    <None Include="..\build\icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+</Project>
